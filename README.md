@@ -66,14 +66,14 @@ To install docker on Windows, follow the instructions on https://docs.docker.com
 
 Build steps for Windows:
 1. Download docker/Dockerfile. No need to manually fetching the entire repository. It will be fetched by the build script.
-2. Rename the decoder package to o266dec-win64.tar.tz, and put it in the same folder as the downloaded Dockerfile. No need to uncompress it.
+2. Rename the decoder package to o266dec-win64.tar.xz, and put it in the same folder as the downloaded Dockerfile. No need to uncompress it.
 3. Go to the folder containing the decoder library and Dockerfile, run the following command
 ```
 docker build -t o266player --force-rm .
 ```
 4. After the build finishes, use following command to fetch the player package, then uncompress it and the player is ready to use.
 ```
-docker run --rm o266player cat /O266player/win32/vlc-3.0.11.1-w64.zip > vlc-3.0.11.1-w64.zip
+docker run --rm o266player cat /O266player/win32/vlc-3.0.11.1-win64.zip > vlc-3.0.11.1-win64.zip
 ```
 
 The player has been tested on Windows Server 2016. Other Windows platforms have not been tested.
@@ -97,7 +97,7 @@ For example, the input file is input.bin at 50fps.
 ./build/bin/vlc-osx-static input.bin --no-drop-late-frames --avformat-fps=50
 ```
 
-To play raw VVC vidoe stream on Windows:
+To play raw VVC video stream on Windows:
 
 For example, the input file is input.bin at 50fps.
 ```
